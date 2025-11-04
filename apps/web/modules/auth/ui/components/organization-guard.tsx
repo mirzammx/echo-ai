@@ -11,14 +11,14 @@ export const OrganizationGuard = ({ children }: { children: React.ReactNode }) =
     if (!organization) {
         return (
             <AuthLayout>
-                <p>Create or select an organization to continue.</p>
+                <OrgSelectView />
             </AuthLayout>
         )
     }
 
     return (
-        <div>
+        <>
             {children}
-        </div>
+        </>
     )
 }
