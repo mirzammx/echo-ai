@@ -14,6 +14,7 @@ export const add=mutation({
         if (identity === null) {
         throw new Error("Not authenticated");
         }
+        throw new Error("Tracking text");
         const userId=await ctx.db.insert("users",{
         name:"mirza",});
         return userId;
